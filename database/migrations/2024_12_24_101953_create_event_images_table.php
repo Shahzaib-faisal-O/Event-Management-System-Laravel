@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->foreignId('role_id')->constrained()->onDelete('cascade');
+        Schema::create('event_images', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('event_id')->constrained()->onDelete('cascade');
+            $table->string('image_path');
+            $table->timestamps();
         });
-
-       
+        
     }
 
     /**
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        
+        Schema::dropIfExists('event_images');
     }
 };

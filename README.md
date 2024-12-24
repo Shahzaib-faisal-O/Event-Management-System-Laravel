@@ -1,83 +1,41 @@
-# Laravel Project Setup Guide
+# Laravel Event Management System
 
-Follow these steps to create a new Laravel project:
+This project is an **Event Management System** built using the Laravel framework. It allows users to register for events, and administrators to manage events with the following features:
 
-## Prerequisites
+## Features
 
-- Ensure you have [Composer](https://getcomposer.org/) installed on your system.
-- PHP 8.0 or later is required.
-- Installing XAMPP will automatically install php as well mysql.
+1. **Dynamic Role Management**
 
-<!-- <hr> -->
+    - Supports roles like Super Admin, Event Manager, and Attendee.
+    - Each role has specific permissions (e.g., create, edit, delete, and view events).
 
-## For Szabist university
+2. **Event CRUD**
 
-- PHP and Composer is already installed.
+    - Administrators can create, read, update, and delete events.
+    - Events support multiple image uploads and event-specific file attachments (like brochures).
 
-## Steps to Create and Run Your Laravel Project
+3. **Search and Filter**
 
-1. **Install Laravel Installer**
+    - Users can search events by:
+        - Location
+        - Date
+        - Category
+    - Dynamic filters with pagination for an enhanced user experience.
 
-   ```bash
-   composer global require laravel/installer
-   ```
+4. **Responsive Design**
+    - The interface is styled with custom CSS for a clean and user-friendly layout.
 
-2. **Create a New Project**
+---
 
-   ```bash
-   laravel new First-project
-   ```
+## Installation
 
-3. **Navigate to Your Project Directory**
+1. Clone this repository:
+   `bash
+    git clone https://github.com/yourusername/event-management-system.git
+    cd event-management-system
+    `
+   `If you have any questions or suggestions, feel free to contact me:`
 
-   ```bash
-   cd First-project
-   ```
+### GitHub: Shahzaib-Faisal-O
 
-4. **Set Up the Database**
-
-   - Laravel uses MySQL as the default database. Ensure you have MySQL installed and running.
-   - If you encounter any errors, locate the `.env` file in your project directory and update the database settings:
-     ```dotenv
-     DB_CONNECTION=mysql
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_DATABASE=laravel
-     DB_USERNAME=root
-     DB_PASSWORD=
-     ```
-
-5. **Run Database Migrations**
-
-   - To create the required tables for your project, run:
-
-     ```bash
-     php artisan migrate
-     ```
-
-   - If you encounter any session-related issues, ensure the database is correctly configured in the `.env` file.
-
-6. **Serve Your Project**
-
-   - Start the Laravel development server:
-
-     ```bash
-     php artisan serve
-     ```
-
-   - Open your browser and visit `http://127.0.0.1:8000` to see your project in action.
-
-## Troubleshooting
-
-- If any issues arise, double-check your `.env` file for correct database configuration.
-- Ensure Composer dependencies are up to date by running:
-  ```bash
-  composer install
-  ```
-- for session Problem
-  `run:php artisan session:table`
-
-- for cache clear
-  `run:php artisan cache:clear`
-
-Congratulations! Your Laravel project is now up and running.
+#### Email: bcsbs2212349@szabist.pk
